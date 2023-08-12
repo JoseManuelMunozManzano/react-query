@@ -35,3 +35,6 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
 
 - Configuración de TanStack Query `https://tanstack.com/query/v4/docs/react/quick-start`
 - fetch API
+- Axios
+- Buenas prácticas
+  - Tipado
