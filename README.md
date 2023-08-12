@@ -6,4 +6,6 @@ Prácticas hechas con React Query proveniente del curso de DevTalles React Query
 
 ## Proyectos
 
-### 1. Número criptográfico aleatorio atmosférico
+### 1. Número criptográfico aleatorio atmosférico sin usar TanStack Query
+
+### 2. Número criptográfico aleatorio atmosférico usando TanStack Query
