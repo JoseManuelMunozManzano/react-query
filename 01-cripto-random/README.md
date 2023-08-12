@@ -26,3 +26,4 @@ Acceder al navegador, a la ruta indicada en VITE
 - Mejorar experiencia de usuario
 - Buenas prácticas de React con respecto a hacer independientes los useEffect
 - Uso de ternario
+- Uso de throw y manejo de errores
