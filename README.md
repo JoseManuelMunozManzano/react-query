@@ -11,3 +11,5 @@ TanStack Query es una manera de trabajar con promesas y de manejar estados.
 ### 1. Número criptográfico aleatorio atmosférico sin usar TanStack Query
 
 ### 2. Número criptográfico aleatorio atmosférico usando TanStack Query
+
+### 3. React Query Issues
