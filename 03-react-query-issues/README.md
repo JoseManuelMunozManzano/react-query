@@ -38,3 +38,5 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
 - Axios
 - Buenas prácticas
   - Tipado
+  - Custom Hook (Patrón adaptador)
+- Demorar respuesta de nuestra app un tiempo con setTimeout
