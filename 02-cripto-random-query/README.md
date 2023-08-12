@@ -28,3 +28,4 @@ Acceder al navegador, a la ruta indicada en VITE
 - query.data
 - query.error
 - query.refetch()
+- Patrón adaptador (custom hooks)
