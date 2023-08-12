@@ -23,3 +23,6 @@ Acceder al navegador, a la ruta indicada en VITE
 - React.StrictMode
 - UseEffect no puede ser asíncrono
 - Uso de fetch API
+- Mejorar experiencia de usuario
+- Buenas prácticas de React con respecto a hacer independientes los useEffect
+- Uso de ternario
