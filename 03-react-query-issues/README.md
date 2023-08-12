@@ -22,3 +22,13 @@ Hay dos rutas:
 
 - Router
 - ReactMarkdown
+- Instalación de TanStack Query `https://tanstack.com/query/v4`
+  - `yarn add @tanstack/react-query`
+- Instalación de DevTools `https://tanstack.com/query/v4/docs/react/devtools`
+
+  Nos indican diferentes estados de nuestras peticiones o en nuestro caché.
+  Se desactiva automáticamente cuando está en producción
+
+  - `yarn add @tanstack/react-query-devtools`
+
+- Configuración de TanStack Query `https://tanstack.com/query/v4/docs/react/quick-start`
