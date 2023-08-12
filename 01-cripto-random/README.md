@@ -2,7 +2,7 @@
 
 Mini-proyecto para ver las ventajas que tiene usar React Query.
 
-En este primer punto NO SE USA REACT QUERY, sino que se ve la cantidad de trabajar que hay que acometer para mantener estados y hacer funcionar la app.
+En este primer punto NO SE USA REACT QUERY, sino que se ve la cantidad de trabajo que hay que acometer para mantener estados y hacer funcionar la app.
 
 Se está usando esta API de ruido atmosférico: `https://www.random.org/integers/?num=1&min=1&max=500&col=1&base=10&format=plain&rnd=new`
 
