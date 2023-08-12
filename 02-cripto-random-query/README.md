@@ -23,3 +23,8 @@ Acceder al navegador, a la ruta indicada en VITE
 - Instalación de TanStack Query `https://tanstack.com/query/v4`
   - `yarn add @tanstack/react-query`
 - Configuración de TanStack Query `https://tanstack.com/query/v4/docs/react/quick-start`
+- Uso de useQuery
+- query.isFetching
+- query.data
+- query.error
+- query.refetch()
