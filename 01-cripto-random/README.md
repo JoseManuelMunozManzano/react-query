@@ -17,3 +17,9 @@ Entramos a la carpeta 01-cripto-random e instalamos dependencias: `yarn install`
 Para ejecutar la aplicación ejecutar `yarn dev`
 
 Acceder al navegador, a la ruta indicada en VITE
+
+## Cosas que se ven
+
+- React.StrictMode
+- UseEffect no puede ser asíncrono
+- Uso de fetch API
