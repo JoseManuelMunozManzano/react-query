@@ -18,6 +18,8 @@ Hay dos rutas:
 
 `/issues/issue/123`
 
+Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://api.github.com/repos/facebook/react/labels`
+
 ## Cosas que se ven
 
 - Router
@@ -32,3 +34,4 @@ Hay dos rutas:
   - `yarn add @tanstack/react-query-devtools`
 
 - Configuración de TanStack Query `https://tanstack.com/query/v4/docs/react/quick-start`
+- fetch API
