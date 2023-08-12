@@ -32,7 +32,9 @@ export const useLabels = () => {
   //     no intenta actualizar la información de la caché.
   //     Si la data cambia constantemente es bueno no tener esta opción, pero en este caso sabemos que esta
   //    información cambia muy de vez en cuando.
-  const labelsQuery = useQuery(['labels'], getLabels, { refetchOnWindowFocus: false });
+  //    staleTime se indica en milésimas de segundo. En el ejemplo hemos puesto que nuestra data se va a mantener fresca (en fresh) por 1 hora.
+  //    Ahora los labels se cargarán solo una vez cada hora o cuando refresquemos la app.
+  const labelsQuery = useQuery(['labels'], getLabels, { refetchOnWindowFocus: false, staleTime: 1000 * 60 * 60 });
 
   // Siempre es mejor devolver un objeto porque si el día de mañana añadimos algo que exportar, si no lo
   // devolvemos como objeto sería más complicado añadirlo.

@@ -4,6 +4,10 @@ export const LabelPicker = () => {
   const { labelsQuery } = useLabels();
 
   //! isLoading en vez de isFetching
+  // isLoading se dispara cuando estamos cargando la data por primera vez y no tenemos data en caché.
+  // Muestra el mensaje de carga. Usualmente trabajaremos más con isLoading.
+  //
+  // isFetching se va a disparar siempre que estemos haciendo alguna petición.
   if (labelsQuery.isLoading) return <h1>Loading...</h1>;
 
   return (
