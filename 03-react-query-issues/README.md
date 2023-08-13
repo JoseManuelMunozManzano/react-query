@@ -53,3 +53,4 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
 - Archivos de barril (index.ts)
 - Navegación (useNavigate)
 - useParams
+- Dependencias de queries anteriores para ejecutar una query (opción enabled)
