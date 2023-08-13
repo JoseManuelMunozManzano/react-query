@@ -8,6 +8,8 @@ Luego renombramos ese nombre a 03-react-query-issues
 
 Entramos a la carpeta 03-react-query-issues e instalamos dependencias: `yarn install`
 
+Sustituir archivo .env.template por .env e informar las variables de entorno
+
 Para ejecutar la aplicación ejecutar `yarn dev`
 
 Acceder al navegador, a la ruta indicada en VITE
@@ -47,3 +49,4 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
 - inactive: Cuando se ha disparado alguna petición pero no es necesaria porque ya no se usa esa data. Por defecto a los 5 minutos se borran los queries que están inactivos
 - Uso de spinner de react-icons
 - Precarga de data para mejorar experiencia de usuario. initialData y placeholderData
+- Uso de token GitHub (Fine-grained personal access tokens) para autenticación `https://github.com/settings/tokens?type=beta`
