@@ -46,3 +46,4 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
 - stale: Cuando termina el fetching, por una fracción de segundo la data cae en fresh y luego va a stale. Es la data que está en cache y que ya es vieja. No debemos confiar en esta data porque puede haber cambiado. Nos sirve para mostrar algo que tenemos en caché y que el cliente sienta una mejor experiencia de usuario
 - inactive: Cuando se ha disparado alguna petición pero no es necesaria porque ya no se usa esa data. Por defecto a los 5 minutos se borran los queries que están inactivos
 - Uso de spinner de react-icons
+- Precarga de data para mejorar experiencia de usuario. initialData y placeholderData
