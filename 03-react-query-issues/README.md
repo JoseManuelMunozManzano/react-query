@@ -50,3 +50,4 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
 - Uso de spinner de react-icons
 - Precarga de data para mejorar experiencia de usuario. initialData y placeholderData
 - Uso de token GitHub (Fine-grained personal access tokens) para autenticación `https://github.com/settings/tokens?type=beta`
+- Archivos de barril (index.ts)
