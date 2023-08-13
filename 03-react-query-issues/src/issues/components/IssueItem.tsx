@@ -18,17 +18,25 @@ export const IssueItem: FC<Props> = ({ issue }) => {
   const queryClient = useQueryClient();
 
   // Cuando el ratón se pose sobre un issue queremos precargar el issue y sus comentarios.
-  const onMouseEnter = () => {
+  const prefetchData = () => {
     queryClient.prefetchQuery(['issue', issue.number], () => getIssueInfo(issue.number));
 
     queryClient.prefetchQuery(['issue', issue.number, 'comments'], () => getIssueComments(issue.number));
+  };
+
+  // La técnica presetData es muy parecida a la técnica de prefetchData, salvo que en lugar de mandar una función
+  // se manda la data que queremos almacenar en esa caché.
+  // No se hacen peticiones http, solo se precargan los datos.
+  const preSetData = () => {
+    queryClient.setQueryData(['issue', issue.number], issue);
   };
 
   return (
     <div
       className="card mb-2 issue"
       onClick={() => navigate(`/issues/issue/${issue.number}`)}
-      onMouseEnter={onMouseEnter}
+      // onMouseEnter={prefetchData}
+      onMouseEnter={preSetData}
     >
       <div className="card-body d-flex align-items-center">
         {issue.state === State.Open ? <FiInfo size={30} color="red" /> : <FiCheckCircle size={30} color="green" />}

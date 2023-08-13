@@ -56,7 +56,7 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
 - Dependencias de queries anteriores para ejecutar una query (opción enabled)
 - Optimizaciones
   - Pre-fetch de queries: Cuando el usuario deja el cursor en uno de los issue lanzamos peticiones http para cargar el issue y los comentarios
-  - Establecer data en el caché
+  - Establecer data en el caché: En vez de llamar a una función como en Pre-fetch, mandamos la data que queremos almacenar en esa caché. No se hacen peticiones http, solo se precarga la data
   - Establecer data en caché específico
   - Cargar data bajo demanda
   - QueryClient
