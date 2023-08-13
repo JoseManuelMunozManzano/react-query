@@ -28,7 +28,10 @@ export const IssueItem: FC<Props> = ({ issue }) => {
   // se manda la data que queremos almacenar en esa caché.
   // No se hacen peticiones http, solo se precargan los datos.
   const preSetData = () => {
-    queryClient.setQueryData(['issue', issue.number], issue);
+    queryClient.setQueryData(['issue', issue.number], issue, {
+      // Establecemos la fecha de actualización y decimos a React Query que mantenga esta data fresca el tiempo indicado
+      updatedAt: new Date().getTime() + 100000,
+    });
   };
 
   return (
