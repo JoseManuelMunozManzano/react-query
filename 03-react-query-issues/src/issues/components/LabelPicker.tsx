@@ -1,3 +1,4 @@
+import { LoadingIcon } from '../../shared/components/LoadingIcon';
 import { useLabels } from '../hooks/useLabels';
 
 export const LabelPicker = () => {
@@ -8,7 +9,7 @@ export const LabelPicker = () => {
   // Muestra el mensaje de carga. Usualmente trabajaremos más con isLoading.
   //
   // isFetching se va a disparar siempre que estemos haciendo alguna petición.
-  if (labelsQuery.isLoading) return <h1>Loading...</h1>;
+  if (labelsQuery.isLoading) return <LoadingIcon />;
 
   return (
     <div>
