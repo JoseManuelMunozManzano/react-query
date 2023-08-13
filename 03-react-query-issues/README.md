@@ -54,3 +54,9 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
 - Navegación (useNavigate)
 - useParams
 - Dependencias de queries anteriores para ejecutar una query (opción enabled)
+- Optimizaciones
+  - Pre-fetch de queries: Cuando el usuario deja el cursor en uno de los issue lanzamos peticiones http para cargar el issue y los comentarios
+  - Establecer data en el caché
+  - Establecer data en caché específico
+  - Cargar data bajo demanda
+  - QueryClient
