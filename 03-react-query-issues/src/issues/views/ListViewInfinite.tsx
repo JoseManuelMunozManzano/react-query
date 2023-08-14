@@ -34,7 +34,15 @@ export const ListViewInfinite = () => {
           />
         )}
 
-        <button className="btn btn-outline-primary mt-2">Load More...</button>
+        <button
+          className="btn btn-outline-primary mt-2"
+          disabled={!issuesQuery.hasNextPage}
+          onClick={() => {
+            issuesQuery.fetchNextPage();
+          }}
+        >
+          Load More...
+        </button>
       </div>
 
       <div className="col-4">

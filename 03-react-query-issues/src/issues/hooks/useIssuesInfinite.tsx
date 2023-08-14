@@ -19,7 +19,7 @@ const getIssues = async ({ pageParam = 1, queryKey }: QueryProps): Promise<Issue
   const [, , args] = queryKey;
   const { state, labels } = args as Props;
 
-  await sleep(2);
+  // await sleep(2);
 
   const params = new URLSearchParams();
   if (state) params.append('state', state); // state es open o close o no viene
@@ -44,8 +44,15 @@ export const useIssuesInfinite = ({ state, labels }: Props) => {
   // La data es lo que utilizamos para mandar llamar la función.
   // Dentro de data lo más importante es pageParam que es la página en la que estamos y
   // queryKey que es el nombre de la caché.
-  const issuesQuery = useInfiniteQuery(['issues', 'infinite', { state, labels, page: 1 }], (data) => getIssues(data), {
-    // TODO: getNextPageParam()
+  const issuesQuery = useInfiniteQuery(['issues', 'infinite', { state, labels }], (data) => getIssues(data), {
+    // pages es un arreglo de arreglo de Issues, es decir algo así [ [Issue1...Issue5], [Issue6...Issue10] ...]
+    // Si la longitud de lastPage es menor de 5 es que ya no hay más páginas y nos salimos.
+    getNextPageParam: (lastPage, pages) => {
+      if (lastPage.length < 5) return;
+
+      // Este valor se envía a getIssues como pageParam
+      return pages.length + 1;
+    },
   });
 
   return { issuesQuery };
