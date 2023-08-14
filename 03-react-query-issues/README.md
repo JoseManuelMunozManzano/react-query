@@ -62,3 +62,4 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
   - QueryClient
 - Pasar información del hijo al padre
 - Nombres de caché complejos sin importar el orden en que vengan
+- URLSearchParams
