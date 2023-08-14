@@ -71,5 +71,6 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
   - Número de página
   - Caché por página y condiciones
 - Infinite Scroll
+  - UseInfiniteQuery
   - Cargar siguientes registros
   - Manejar caché del infinite scroll
