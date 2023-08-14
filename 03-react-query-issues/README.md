@@ -63,3 +63,11 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
 - Pasar información del hijo al padre
 - Nombres de caché complejos sin importar el orden en que vengan
 - URLSearchParams
+- Paginación tradicional
+  - Siguiente página
+  - Página anterior
+  - Número de página
+  - Caché por página y condiciones
+- Infinite Scroll
+  - Cargar siguientes registros
+  - Manejar caché del infinite scroll
