@@ -14,11 +14,13 @@ Para ejecutar la aplicación ejecutar `yarn dev`
 
 Acceder al navegador, a la ruta indicada en VITE
 
-Hay dos rutas:
+Hay tres rutas:
 
 `/issues/list`
 
 `/issues/issue/123`
+
+`/issues/list/infinite` Para scroll infinito
 
 Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://api.github.com/repos/facebook/react/labels`
 
