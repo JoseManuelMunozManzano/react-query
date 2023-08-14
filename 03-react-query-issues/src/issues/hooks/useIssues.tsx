@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 import { githubApi } from '../../api/githubApi';
@@ -35,6 +35,12 @@ const getIssues = async ({ labels, state, page = 1 }: Props): Promise<Issue[]> =
 export const useIssues = ({ state, labels }: Props) => {
   const [page, setPage] = useState(1);
 
+  // Si state o labels cambia muestro la página 1
+  // Esto NO destruye la caché, pero nosotros NO queremos destruirla.
+  useEffect(() => {
+    setPage(1);
+  }, [state, labels]);
+
   // El primer arreglo identifica el caché
   // La función rellena datos
   // Como para el nombre de la caché no importa el orden de los factores, se indican dentro de un objeto
@@ -54,7 +60,7 @@ export const useIssues = ({ state, labels }: Props) => {
     issuesQuery,
 
     //Getter
-    page,
+    page: issuesQuery.isFetching ? 'Loading' : page,
 
     // Methods
     nextPage,
