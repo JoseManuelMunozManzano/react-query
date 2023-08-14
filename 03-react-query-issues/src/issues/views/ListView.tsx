@@ -17,7 +17,7 @@ export const ListView = () => {
   // A IssueList.tsx, más abajo, enviamos el estado y una función para poder cambiarlo.
 
   // Cuando cambie state o selectedLabels tendremos que volver a mandar el query de petición.
-  const { issuesQuery } = useIssues({ state, labels: selectedLabels });
+  const { issuesQuery, page, nextPage, prevPage } = useIssues({ state, labels: selectedLabels });
 
   const onLabelChanged = (labelName: string) => {
     selectedLabels.includes(labelName)
@@ -35,9 +35,13 @@ export const ListView = () => {
         )}
 
         <div className="d-flex mt-2 justify-content-between align-items-center">
-          <button className="btn btn-outline-primary">Prev</button>
-          <span>123</span>
-          <button className="btn btn-outline-primary">Next</button>
+          <button className="btn btn-outline-primary" onClick={prevPage}>
+            Prev
+          </button>
+          <span>{page}</span>
+          <button className="btn btn-outline-primary" onClick={nextPage}>
+            Next
+          </button>
         </div>
       </div>
 
