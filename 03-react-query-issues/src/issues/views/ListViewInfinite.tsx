@@ -4,7 +4,7 @@ import { IssueList } from '../components/IssueList';
 import { LabelPicker } from '../components/LabelPicker';
 import { LoadingIcon } from '../../shared/components/LoadingIcon';
 
-import { useIssues } from '../hooks';
+import { useIssuesInfinite } from '../hooks';
 import { State } from '../interfaces';
 
 export const ListViewInfinite = () => {
@@ -12,7 +12,7 @@ export const ListViewInfinite = () => {
 
   const [state, setState] = useState<State>();
 
-  const { issuesQuery, page, nextPage, prevPage } = useIssues({ state, labels: selectedLabels });
+  const { issuesQuery } = useIssuesInfinite({ state, labels: selectedLabels });
 
   const onLabelChanged = (labelName: string) => {
     selectedLabels.includes(labelName)
@@ -26,7 +26,12 @@ export const ListViewInfinite = () => {
         {issuesQuery.isLoading ? (
           <LoadingIcon />
         ) : (
-          <IssueList state={state} onStateChanged={(newState) => setState(newState)} issues={issuesQuery.data || []} />
+          <IssueList
+            state={state}
+            onStateChanged={(newState) => setState(newState)}
+            // Aplanamos con .flat() porque data es un arreglo de arreglos
+            issues={issuesQuery.data?.pages.flat() || []}
+          />
         )}
 
         <button className="btn btn-outline-primary mt-2">Load More...</button>
