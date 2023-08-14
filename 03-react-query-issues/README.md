@@ -60,3 +60,4 @@ Para obtener labels de Facebook/React, en Postman (y en nuestra app): `https://a
   - Establecer data en caché específico
   - Cargar data bajo demanda: Establecemos la fecha de actualización y decimos a React Query que mantenga esta data fresca el tiempo indicado
   - QueryClient
+- Pasar información del hijo al padre

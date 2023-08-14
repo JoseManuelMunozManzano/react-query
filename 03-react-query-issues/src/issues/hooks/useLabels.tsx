@@ -16,12 +16,12 @@ import { sleep } from '../../helpers/sleep';
 // };
 
 // Con Axios y tipo de dato
-// NOTA: Si fallara la authorization de GitHub (fuente githubApi.ts) descomentar aquí la parte headers
 const getLabels = async (): Promise<Label[]> => {
   await sleep(2);
 
+  // NOTA: Si fallara la authorization de GitHub (fuente githubApi.ts) descomentar aquí la parte headers
   const { data } = await githubApi.get<Label[]>(
-    '/labels'
+    '/labels?per_page=100'
     // , {
     //   headers: {
     //     Authorization: null
