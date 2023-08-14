@@ -15,7 +15,9 @@ export const ListView = () => {
   // Necesito saber en este nivel que se ha pulsado en IssueList.tsx (link All, Open o Closed)
   // El hijo pasa información al padre.
   // A IssueList.tsx, más abajo, enviamos el estado y una función para poder cambiarlo.
-  const { issuesQuery } = useIssues();
+
+  // Cuando cambie state o selectedLabels tendremos que volver a mandar el query de petición.
+  const { issuesQuery } = useIssues({ state, labels: selectedLabels });
 
   const onLabelChanged = (labelName: string) => {
     selectedLabels.includes(labelName)
